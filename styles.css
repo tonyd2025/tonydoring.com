@@ -647,21 +647,22 @@ body {
 }
 
 .timeline-card {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(30px) scale(0.9);
+    position: relative;
     width: 100%;
     max-width: 800px;
     background: rgba(0, 0, 0, 0.95);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 1;
+    visibility: visible;
+    margin: 0 auto;
     z-index: 5;
-    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
 }
 
 .timeline-card.active {
