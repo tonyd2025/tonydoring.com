@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony D - Portfolio & Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Tony Doring</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#timeline" class="nav-link">Experience</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Hi, I'm Tony</span>
+                </h1>
+                <h2 class="hero-subtitle">Data storyteller | Marketing Operations and Program Leader</h2>
+                <p class="hero-description">
+                   Turning data into stories that drive results.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="downloadResume()">Download Resume</button>
+                    <button class="btn btn-secondary" onclick="scrollToContact()">Get In Touch</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="glass-card profile-card">
+                    <img src="profile-photo.jpg" alt="Tony D" class="profile-photo-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Statement Section -->
+    <section id="about" class="personal-statement">
+        <div class="container">
+            <div class="statement-layout">
+                <!-- Left Column: Personal Statement -->
+                <div class="statement-column">
+                    <div class="glass-card statement-card">
+                        <h2 class="statement-title">Marketing Operations Leader with <span class="gradient-text">13+ Years</span> of Experience</h2>
+                        <p class="statement-description">
+                            For more than 13 years, I've helped major media companies, brands and agencies grow by blending marketing operations, efficient workflows and data-driven storytelling. I know how to turn complex information into clarity that move goals forward and drive measurable revenue impact.
+                        </p>
+                        <div class="highlight-tags">
+                            <span class="highlight-tag">AI Powered Workflows</span>
+                            <span class="highlight-tag">Thought Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Company Logos -->
+                <div class="companies-column">
+                    <div class="glass-card companies-card">
+                        <h3 class="companies-title">Brands I've Worked With</h3>
+                        <div class="companies-grid-compact">
+                            <div class="company-logo-compact">
+                                <img src="logos/ad-results-media-logo.png" alt="Ad Results Media" class="company-img-compact">
+                                <span class="company-name-compact">Ad Results Media</span>
+                            </div>
+                            <div class="company-logo-compact">
+                                <img src="logos/aka-nyc-logo.png" alt="AKA NYC" class="company-img-compact">
+                                <span class="company-name-compact">AKA NYC</span>
+                            </div>
+                            <div class="company-logo-compact">
+                                <img src="logos/espn-logo.png" alt="ESPN" class="company-img-compact">
+                                <span class="company-name-compact">ESPN</span>
+                            </div>
+                            <div class="company-logo-compact">
+                                <img src="logos/the-new-york-times-logo.png" alt="The New York Times" class="company-img-compact">
+                                <span class="company-name-compact">The New York Times</span>
+                            </div>
+                            <div class="company-logo-compact">
+                                <img src="logos/spotify-logo.png" alt="Spotify" class="company-img-compact">
+                                <span class="company-name-compact">Spotify</span>
+                            </div>
+                            <div class="company-logo-compact">
+                                <img src="logos/bloomberg-logo.png" alt="Bloomberg" class="company-img-compact">
+                                <span class="company-name-compact">Bloomberg</span>
+                            </div>
+                            <div class="company-logo-compact">
+                                <img src="logos/new-york-botanical-garden-logo.png" alt="New York Botanical Garden" class="company-img-compact">
+                                <span class="company-name-compact">New York Botanical Garden</span>
+                            </div>
+                            <div class="company-logo-compact">
+                                <img src="logos/the-met-museum-logo.png" alt="The Met Museum" class="company-img-compact">
+                                <span class="company-name-compact">The Met Museum</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Interactive Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Career Timeline</h2>
+                <p class="section-subtitle">Scroll over each company to explore my professional experience.</p>
+            </div>
+            
+            <div class="interactive-timeline">
+                <!-- Timeline Track -->
+                <div class="timeline-track">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Timeline Nodes -->
+                    <div class="timeline-nodes">
+                        <!-- ESPN -->
+                        <div class="timeline-node" data-company="espn">
+                            <div class="node-logo">
+                                <img src="logos/espn-logo.png" alt="ESPN" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                            </div>
+                            <div class="node-year">2016-2021</div>
+                        </div>
+
+                        <!-- The New York Times -->
+                        <div class="timeline-node" data-company="new-york-times">
+                            <div class="node-logo">
+                                <img src="logos/the-new-york-times-logo.png" alt="The New York Times" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-icon">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                            </div>
+                            <div class="node-year">2021-2022</div>
+                        </div>
+
+                        <!-- Spotify -->
+                        <div class="timeline-node" data-company="spotify">
+                            <div class="node-logo">
+                                <img src="logos/spotify-logo.png" alt="Spotify" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                            </div>
+                            <div class="node-year">2022-2023</div>
+                        </div>
+
+                        <!-- AKA NYC -->
+                        <div class="timeline-node" data-company="aka-nyc">
+                            <div class="node-logo">
+                                <img src="logos/aka-nyc-logo.png" alt="AKA NYC" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="node-year">2023</div>
+                        </div>
+
+                        <!-- Ad Results Media -->
+                        <div class="timeline-node" data-company="ad-results-media">
+                            <div class="node-logo">
+                                <img src="logos/ad-results-media-logo.png" alt="Ad Results Media" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="node-year">2024-2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Cards Container -->
+                <div class="cards-container">
+                    <!-- ESPN Card -->
+                    <div class="timeline-card espn-card active" data-company="espn">
+                        <div class="card-header">
+                            <div class="company-badge espn-badge">
+                                <img src="logos/espn-logo.png" alt="ESPN" class="badge-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="badge-fallback">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                            </div>
+                            <div class="header-info">
+                                <h3>ESPN</h3>
+                                <div class="job-title">Associate Manager, Audio Marketing</div>
+                                <div class="job-duration">Oct 2016 - March 2021 • New York, NY</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="skills-grid">
+                                <span class="skill-chip">Sales Collateral</span>
+                                <span class="skill-chip">Marketing Materials</span>
+                                <span class="skill-chip">Sales Training</span>
+                            </div>
+                            <div class="achievements">
+                                <p>Created and managed entire pipeline of RFP pitch decks for 15+ account executives and $100M+ in yearly ad sales across ESPN Podcasts and Radio.</p>
+                                <p>Created thought leadership and industry presentations for ESPN Audio in the podcast industry.</p>
+                                <p>Developed sales narratives utilizing data and custom research that launched multiple podcasts (30 For 30 Podcasts, ESPN Daily, etc.) with
+                                    multimillion dollar Presenting Sponsorships pre-launch.</p>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <span class="metric-value">$100M+</span>
+                                    <span class="metric-label">Yearly Ad Sales</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">Industry Presence+</span>
+                                    <span class="metric-label">Through Thought Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The New York Times Card -->
+                    <div class="timeline-card nyt-card" data-company="new-york-times">
+                        <div class="card-header">
+                            <div class="company-badge nyt-badge">
+                                <img src="logos/the-new-york-times-logo.png" alt="The New York Times" class="badge-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="badge-fallback">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                            </div>
+                            <div class="header-info">
+                                <h3>The New York Times</h3>
+                                <div class="job-title">Manager, Measurement Solutions</div>
+                                <div class="job-duration">March 2021 - April 2022 • New York, NY</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="skills-grid">
+                                <span class="skill-chip">Survey Design</span>
+                                <span class="skill-chip">Sales Training</span>
+                                <span class="skill-chip">Thought Leadership</span>
+                            </div>
+                            <div class="achievements">
+                                <p>Drove over $2.5M in new business revenue through proactive and custom quantitative and qualitative market research surveys (custom
+                                    research, NPS) through Qualtrics via the NYT Sources audience panel, generating strategic B2B insights and communication, presentations
+                                    and narratives for 360 engagement with NYT advertising teams and clients.</p>
+                                <p>Transitioned the Measurement Solutions team’s survey workflow from Alida to Qualtrics which doubled the output of team surveys due to
+                                    more efficient survey writing and data analysis.</p>
+                                <p>Designed and created B2B value story sales trainings and learnings of first party data product analysis tool that helped double output of
+                                    tool adoption to 80+ clients, leading to multiple multi-million dollar client renewals.</p>
+                                    
+                            </div>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <span class="metric-value">$2.5M+</span>
+                                    <span class="metric-label">New Business Revenue</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">80+</span>
+                                    <span class="metric-label">Clients Adopted</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spotify Card -->
+                    <div class="timeline-card spotify-card" data-company="spotify">
+                        <div class="card-header">
+                            <div class="company-badge spotify-badge">
+                                <img src="logos/spotify-logo.png" alt="Spotify" class="badge-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="badge-fallback">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                            </div>
+                            <div class="header-info">
+                                <h3>Spotify</h3>
+                                <div class="job-title">Program Manager, Advertising Sciences</div>
+                                <div class="job-duration">April 2022 - Jan 2023 • New York, NY</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="skills-grid">
+                                <span class="skill-chip">Program Management</span>
+                                <span class="skill-chip">Marketing Research</span>
+                                <span class="skill-chip">Cross-Functional</span>
+                            </div>
+                            <div class="achievements">
+                                <p>Launched pilot advertiser program for ad creative measurement with 10 premier clients.</p>
+                                <p>Boosted team efficiency through enhanced goal tracking and cross-functional collaboration.</p>
+                                <p>Spearheaded multiple cross-functional research programs, designed methodologies, analyzed data, and delivered actionable insights
+                                    (though B2B articles and client presentations) to inform decision-making and industry thought leadership.</p>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <span class="metric-value">+51%</span>
+                                    <span class="metric-label">YoY Revenue Increase</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">Pilot Product</span>
+                                    <span class="metric-label">For 10 Top Clients</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AKA NYC Card -->
+                    <div class="timeline-card aka-card" data-company="aka-nyc">
+                        <div class="card-header">
+                            <div class="company-badge aka-badge">
+                                <img src="logos/aka-nyc-logo.png" alt="AKA NYC" class="badge-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="badge-fallback">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="header-info">
+                                <h3>AKA NYC</h3>
+                                <div class="job-title">Data Science & Marketing Research Consultant</div>
+                                <div class="job-duration">June 2023 - Dec 2023 • New York, NY</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="skills-grid">
+                                <span class="skill-chip">Marketing Research</span>
+                                <span class="skill-chip">Survey Design</span>
+                                <span class="skill-chip">Project Management</span>
+                            </div>
+                            <div class="achievements">
+                                <p>Conducted proprietary quantitative and qualitative marketing research using survey design, interviews, and data analysis tools, shaping the agency's positioning.</p>
+                                <p>Generated $50K+ in new marketing research revenue through streamlining and creating new marketing research offerings (marketing
+                                    research audits, creative testing) for nonprofit clients (inclusive of The Met Museum, Bloomberg Culture and New York Botanical Gardens).</p>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <span class="metric-value">$50K+</span>
+                                    <span class="metric-label">New Research Revenue</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">100%</span>
+                                    <span class="metric-label">Client Satisfaction</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ad Results Media Card -->
+                    <div class="timeline-card ad-results-card" data-company="ad-results-media">
+                        <div class="card-header">
+                            <div class="company-badge ad-results-badge">
+                                <img src="logos/ad-results-media-logo.png" alt="Ad Results Media" class="badge-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="badge-fallback">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="header-info">
+                                <h3>Ad Results Media</h3>
+                                <div class="job-title">Media Operations Director</div>
+                                <div class="job-duration">Jan 2024 - July 2025 • Remote</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="skills-grid">
+                                <span class="skill-chip">Project Management</span>
+                                <span class="skill-chip">AI Ad Creation</span>
+                                <span class="skill-chip">Team Leadership</span>
+                            </div>
+                            <div class="achievements">
+                                <p>Led the integration of the Audio Insights and Creative teams into a unified media operations group of 14 team members which improved
+                                    cross-functional efficiency and fostered closer collaboration that sparked creative innovation across podcast campaigns for 50+ clients.</p>
+                                <p>Implemented an agency wide project management system (Monday.com) and ran a project steering committee that streamlined operations
+                                    from 30+ Google spreadsheets and multiple ticketing systems (e.g., Jira and Basecamp) into a single organizational hub.</p>
+                                <p>Successfully piloted and launched an Al and synthetic voice ad creation production offering for multiple clients enabling rapid campaign
+                                    launches (within two days vs several weeks) that directly led to incremental production revenue and $100K+ in media spend in 2024-25.</p>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <span class="metric-value">30+ → 1</span>
+                                    <span class="metric-label">Spreadsheets Unified</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">2 weeks → 2 days</span>
+                                    <span class="metric-label">Ad Production Time</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Consulting Services</h2>
+                <p class="section-subtitle">Strategic solutions for your business growth</p>
+            </div>
+            <div class="services-grid">
+                <div class="glass-card service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Marketing Research</h3>
+                    <p>AI-powered research and analytics to uncover audience insights, test creative, and guide smarter decisions.</p>
+                    <ul class="service-features">
+                        <li>AI audience insights</li>
+                        <li>Research audits</li>
+                        <li>Messaging testing</li>
+                        <li>Audience & donor analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Insights</h3>
+                    <p>Transform raw data into compelling stories and actionable insights that drive business decisions.</p>
+                    <ul class="service-features">
+                        <li>Insights report on existing data</li>
+                        <li>Custom dashboards</li>
+                        <li>Automated reporting set up</li>
+                        <li>Data storytelling for sales / pitch decks</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Operations & Strategy Consulting</h3>
+                    <p>Data-driven consulting to streamline workflows, optimize team efficiency, and align operations with business goals.</p>
+                    <ul class="service-features">
+                        <li>Workflow audit</li>
+                        <li>Project management implementation & governance</li>
+                        <li>AI-powered automations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life?</p>
+            </div>
+            <div class="contact-content">
+                <div class="glass-card contact-card">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Let's discuss how I can help your business grow.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Based in NJ</span>
+                        </div>
+                    </div>
+                    
+                    <form action="https://formspree.io/f/mrbyyabp" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/anthonydoring/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 TonyDoring.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+</html>
+
+
+
+
+
