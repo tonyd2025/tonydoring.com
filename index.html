@@ -476,24 +476,22 @@
                         </div>
                     </div>
                     
-                    <!-- SIMPLE TEST FORM -->
                     <form action="https://formspree.io/f/mrbyyabp" method="POST">
-                        <p><strong>SIMPLE TEST - NO STYLING</strong></p>
-                        <p>
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </p>
-                        <p>
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </p>
-                        <p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <input type="text" name="subject" placeholder="Subject" required>
-                        </p>
-                        <p>
-                            <textarea name="message" placeholder="Your Message" required></textarea>
-                        </p>
-                        <p>
-                            <button type="submit">Send Message</button>
-                        </p>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                     
                     <div class="social-links">
