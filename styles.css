@@ -1502,6 +1502,11 @@ body {
     margin: 20px 0 10px 0;
 }
 
+/* Form spacing in contact section */
+.contact-card form {
+    margin-bottom: 15px;
+}
+
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
