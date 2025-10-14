@@ -748,51 +748,9 @@ function generateLogoPath(companyName) {
     return `logos/${cleanName}-logo.png`;
 }
 
-// Interactive Timeline functionality
+// Simple Timeline - No interaction needed
 function setupInteractiveTimeline() {
-    const timelineNodes = document.querySelectorAll('.timeline-node');
-    const timelineCards = document.querySelectorAll('.timeline-card');
-    
-    // Add hover event listeners to timeline nodes
-    timelineNodes.forEach(node => {
-        node.addEventListener('mouseenter', function() {
-            const company = this.dataset.company;
-            
-            // Remove active class from all cards
-            timelineCards.forEach(card => {
-                card.classList.remove('active');
-            });
-            
-            // Add active class to corresponding card
-            const targetCard = document.querySelector(`.timeline-card[data-company="${company}"]`);
-            if (targetCard) {
-                targetCard.classList.add('active');
-            }
-        });
-    });
-    
-    // Add click functionality for mobile/touch devices
-    timelineNodes.forEach(node => {
-        node.addEventListener('click', function() {
-            const company = this.dataset.company;
-            
-            // Toggle active state
-            const targetCard = document.querySelector(`.timeline-card[data-company="${company}"]`);
-            if (targetCard) {
-                const isActive = targetCard.classList.contains('active');
-                
-                // Remove active from all cards
-                timelineCards.forEach(card => {
-                    card.classList.remove('active');
-                });
-                
-                // Toggle the clicked card
-                if (!isActive) {
-                    targetCard.classList.add('active');
-                }
-            }
-        });
-    });
+    console.log('Simple timeline setup - no interaction required');
 }
 
 // Initialize everything when DOM is loaded
