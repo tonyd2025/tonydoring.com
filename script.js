@@ -194,37 +194,10 @@ function navbarScrollEffect() {
     });
 }
 
-// Form submission
+// Form submission - Let Formspree handle it naturally
 function setupContactForm() {
-    const form = document.querySelector('form');
-    
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(form);
-        const data = {
-            name: form.querySelector('input[type="text"]').value,
-            email: form.querySelector('input[type="email"]').value,
-            subject: form.querySelectorAll('input[type="text"]')[1].value,
-            message: form.querySelector('textarea').value
-        };
-        
-        // Simple validation
-        if (!data.name || !data.email || !data.subject || !data.message) {
-            showNotification('Please fill in all fields', 'error');
-            return;
-        }
-        
-        if (!isValidEmail(data.email)) {
-            showNotification('Please enter a valid email address', 'error');
-            return;
-        }
-        
-        // Simulate form submission
-        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-        form.reset();
-    });
+    // No JavaScript interference - let the form submit naturally to Formspree
+    console.log('Contact form setup - letting Formspree handle submissions');
 }
 
 // Email validation
