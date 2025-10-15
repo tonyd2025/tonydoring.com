@@ -409,6 +409,15 @@ body {
     margin: 0 auto;
 }
 
+/* Ensure simple timeline cards are visible */
+.simple-timeline .timeline-card {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    margin-bottom: 20px;
+}
+
 .timeline-entry {
     position: relative;
 }
@@ -1711,6 +1720,19 @@ body {
 
     /* Mobile: keep defaults (simple timeline visible, interactive hidden) */
     
+    /* Ensure timeline section is visible on mobile */
+    .timeline-section {
+        display: block;
+    }
+    
+    .simple-timeline {
+        display: flex;
+    }
+    
+    .interactive-timeline {
+        display: none;
+    }
+    
     .experience-header {
         flex-direction: column;
         text-align: center;
@@ -1745,13 +1767,51 @@ body {
         height: 30px;
     }
     
+    /* Mobile timeline card adjustments */
+    .simple-timeline .timeline-card {
+        margin: 0 auto 20px auto;
+        max-width: 100%;
+        width: 100%;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative !important;
+        transform: none !important;
+    }
+    
+    .simple-timeline .timeline-entry {
+        width: 100%;
+        display: block;
+    }
+    
+    /* Ensure timeline cards have proper styling on mobile */
+    .simple-timeline .timeline-card .card-header {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .simple-timeline .timeline-card .card-content {
+        padding: 20px;
+    }
+    
     /* Reduce section padding on mobile */
     .about, .experience, .portfolio, .services, .contact {
         padding: 40px 0;
     }
     
+    .timeline-section {
+        padding: 40px 0;
+    }
+    
     .section-header {
         margin-bottom: 30px;
+    }
+    
+    /* Ensure timeline cards are properly spaced on mobile */
+    .simple-timeline {
+        gap: 30px;
+        padding: 0 10px;
     }
 }
 
@@ -2019,5 +2079,24 @@ body {
     }
     .simple-timeline {
         display: none;
+    }
+}
+
+/* Mobile timeline display - ensure simple timeline is visible */
+@media (max-width: 768px) {
+    .interactive-timeline {
+        display: none !important;
+    }
+    .simple-timeline {
+        display: flex !important;
+    }
+    
+    /* Ensure all timeline cards in simple timeline are visible */
+    .simple-timeline .timeline-card {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative !important;
+        transform: none !important;
     }
 }
