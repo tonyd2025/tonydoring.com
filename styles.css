@@ -402,7 +402,7 @@ body {
 
 /* Simple Timeline Styles */
 .simple-timeline {
-    display: flex; /* default visible */
+    display: flex;
     flex-direction: column;
     gap: 40px;
     max-width: 900px;
@@ -425,34 +425,10 @@ body {
 }
 
 .interactive-timeline {
-    display: none; /* default hidden for mobile-first */
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
     position: relative;
-}
-
-/* Interactive cards default hidden except active */
-.interactive-timeline .cards-container {
-    position: relative;
-    min-height: 420px;
-}
-
-.interactive-timeline .timeline-card {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.interactive-timeline .timeline-card.active {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateX(-50%) translateY(0) scale(1) !important;
-    pointer-events: auto;
 }
 
 /* Timeline Track */
@@ -497,10 +473,6 @@ body {
     position: relative;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* Remove default button styles when rendered as a <button> */
-    background: transparent;
-    border: none;
-    padding: 0;
 }
 
 .timeline-node:hover {
@@ -1708,8 +1680,6 @@ body {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-
-    /* Mobile: keep defaults (simple timeline visible, interactive hidden) */
     
     .experience-header {
         flex-direction: column;
@@ -1840,41 +1810,67 @@ body {
     
     /* Interactive Timeline Mobile Responsive */
     .timeline-section {
-        padding: 60px 0; /* remove extra bottom padding when interactive is hidden */
+        padding: 60px 0 300px 0;
     }
     
-    /* interactive timeline is hidden on mobile by default */
+    .interactive-timeline {
+        padding: 0 20px;
+    }
     
     .timeline-track {
         margin-bottom: 60px;
     }
     
-    /* .timeline-nodes styles are irrelevant on mobile since interactive is hidden */
+    .timeline-nodes {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
     
-    /* .timeline-node mobile spacing not needed */
+    .timeline-node {
+        margin-bottom: 20px;
+    }
     
-    /* node logo sizing not needed on mobile */
+    .node-logo {
+        width: 60px;
+        height: 60px;
+    }
     
-    /* node company logo sizing not needed on mobile */
+    .company-logo {
+        width: 45px;
+        height: 45px;
+    }
     
-    /* node year styling not needed on mobile */
+    .node-year {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        margin-top: 10px;
+    }
     
-    /* cards container min-height not needed on mobile */
+    .cards-container {
+        min-height: 300px;
+    }
     
-    /* Only hide interactive cards by default on small mobile; simple timeline cards remain visible */
-    .interactive-timeline .timeline-card {
+    .timeline-card {
         position: static;
         transform: none;
-        opacity: 0;
-        visibility: hidden;
+        opacity: 1;
+        visibility: visible;
         margin-bottom: 20px;
         max-width: 100%;
     }
     
-    .interactive-timeline .timeline-card.active {
-        opacity: 1;
-        visibility: visible;
-        transform: none;
+    /* Simple Timeline Mobile Styles */
+    .simple-timeline {
+        padding: 0 10px;
+    }
+    
+    .timeline-entry {
+        margin-bottom: 30px;
+    }
+    
+    .timeline-entry:not(:last-child)::after {
+        display: none; /* Hide connecting lines on mobile */
     }
     
     .card-header {
@@ -2010,14 +2006,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #0099ff 0%, #0066ff 100%);
-}
-
-/* Timeline display rules: desktop vs mobile */
-@media (min-width: 769px) {
-    .interactive-timeline {
-        display: block;
-    }
-    .simple-timeline {
-        display: none;
-    }
 }
