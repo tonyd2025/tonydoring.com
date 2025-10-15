@@ -402,7 +402,7 @@ body {
 
 /* Simple Timeline Styles */
 .simple-timeline {
-    display: none; /* hidden on desktop; enabled on mobile */
+    display: flex; /* default visible */
     flex-direction: column;
     gap: 40px;
     max-width: 900px;
@@ -425,6 +425,7 @@ body {
 }
 
 .interactive-timeline {
+    display: none; /* default hidden for mobile-first */
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
@@ -1708,14 +1709,7 @@ body {
         gap: 20px;
     }
 
-    /* Use vertical simple timeline on mobile; hide interactive timeline */
-    .interactive-timeline {
-        display: none;
-    }
-
-    .simple-timeline {
-        display: flex;
-    }
+    /* Mobile: keep defaults (simple timeline visible, interactive hidden) */
     
     .experience-header {
         flex-direction: column;
@@ -1846,46 +1840,26 @@ body {
     
     /* Interactive Timeline Mobile Responsive */
     .timeline-section {
-        padding: 60px 0 300px 0;
+        padding: 60px 0; /* remove extra bottom padding when interactive is hidden */
     }
     
-    .interactive-timeline {
-        padding: 0 20px;
-    }
+    /* interactive timeline is hidden on mobile by default */
     
     .timeline-track {
         margin-bottom: 60px;
     }
     
-    .timeline-nodes {
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
+    /* .timeline-nodes styles are irrelevant on mobile since interactive is hidden */
     
-    .timeline-node {
-        margin-bottom: 20px;
-    }
+    /* .timeline-node mobile spacing not needed */
     
-    .node-logo {
-        width: 60px;
-        height: 60px;
-    }
+    /* node logo sizing not needed on mobile */
     
-    .company-logo {
-        width: 45px;
-        height: 45px;
-    }
+    /* node company logo sizing not needed on mobile */
     
-    .node-year {
-        font-size: 0.8rem;
-        padding: 6px 12px;
-        margin-top: 10px;
-    }
+    /* node year styling not needed on mobile */
     
-    .cards-container {
-        min-height: 300px;
-    }
+    /* cards container min-height not needed on mobile */
     
     /* Only hide interactive cards by default on small mobile; simple timeline cards remain visible */
     .interactive-timeline .timeline-card {
@@ -2036,4 +2010,14 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #0099ff 0%, #0066ff 100%);
+}
+
+/* Timeline display rules: desktop vs mobile */
+@media (min-width: 769px) {
+    .interactive-timeline {
+        display: block;
+    }
+    .simple-timeline {
+        display: none;
+    }
 }
