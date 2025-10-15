@@ -400,97 +400,199 @@ body {
     overflow: hidden;
 }
 
-/* Clean Experience Timeline */
-.experience-timeline {
+/* Experience Cards */
+.experience-cards {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    max-width: 800px;
+    gap: 30px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
 .experience-card {
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.9);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
     padding: 30px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00d4ff, #0099ff);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .experience-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
 }
 
-.company-info {
+.experience-card:hover::before {
+    opacity: 1;
+}
+
+.card-header {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    gap: 20px;
 }
 
-.company-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.fallback-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #00d4ff, #0099ff);
-    border-radius: 50%;
+.company-badge {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
-    color: white;
-    font-size: 24px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.job-details h3 {
-    font-size: 1.5rem;
-    color: #00d4ff;
-    margin-bottom: 5px;
+.badge-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    z-index: 2;
 }
 
-.job-details h4 {
-    font-size: 1.1rem;
+.header-info {
+    flex: 1;
+}
+
+.header-info h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    background: linear-gradient(135deg, #00d4ff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.job-title {
+    font-size: 1.2rem;
     color: #ffffff;
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
 }
 
-.job-period {
+.job-duration {
     color: #aaaaaa;
-    font-size: 0.9rem;
-    margin: 0;
+    font-size: 0.95rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-chip {
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(0, 212, 255, 0.2);
 }
 
 .achievements {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .achievements p {
     color: #cccccc;
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin: 0;
+    font-size: 0.95rem;
 }
 
 .metrics {
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    gap: 30px;
+    margin-top: 10px;
 }
 
-.metrics .metric {
-    background: rgba(0, 212, 255, 0.1);
+.metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #00d4ff;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Company-specific card styles */
+.espn-card::before {
+    background: linear-gradient(90deg, #ff6b35, #000000);
+}
+
+.espn-badge {
+    background: linear-gradient(135deg, #ff6b35, #000000);
+}
+
+.nyt-card::before {
+    background: linear-gradient(90deg, #0066cc, #000000);
+}
+
+.nyt-badge {
+    background: linear-gradient(135deg, #0066cc, #000000);
+}
+
+.spotify-card::before {
+    background: linear-gradient(90deg, #1db954, #000000);
+}
+
+.spotify-badge {
+    background: linear-gradient(135deg, #1db954, #000000);
+}
+
+.aka-card::before {
+    background: linear-gradient(90deg, #ff69b4, #000000);
+}
+
+.aka-badge {
+    background: linear-gradient(135deg, #ff69b4, #000000);
+}
+
+.ad-results-card::before {
+    background: linear-gradient(90deg, #ff0000, #000000);
+}
+
+.ad-results-badge {
+    background: linear-gradient(135deg, #ff0000, #000000);
 }
 
 .interactive-timeline {
@@ -1719,6 +1821,68 @@ body {
         height: 40px;
         font-size: 0.8rem;
     }
+
+    /* Experience Cards Mobile Styles */
+    .experience-cards {
+        padding: 20px 15px;
+        gap: 25px;
+    }
+
+    .experience-card {
+        padding: 25px 20px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .company-badge {
+        width: 70px;
+        height: 70px;
+        align-self: center;
+    }
+
+    .badge-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .header-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .job-title {
+        font-size: 1.1rem;
+    }
+
+    .job-duration {
+        font-size: 0.9rem;
+    }
+
+    .metrics {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .metric {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .metric-value {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+    }
+
+    .metric-label {
+        font-size: 0.9rem;
+        text-align: left;
+    }
     
     .prev {
         left: -50px;
@@ -1924,37 +2088,33 @@ body {
         max-width: 100%;
     }
     
-    /* Experience Timeline Mobile Styles */
-    .experience-timeline {
+    /* Minimal Experience Mobile */
+    .minimal-experience {
         padding: 20px 15px;
-        gap: 30px;
+        gap: 25px;
     }
     
-    .experience-card {
+    .job-card {
         padding: 20px;
     }
     
-    .company-info {
+    .job-header {
         flex-direction: column;
         text-align: center;
         margin-bottom: 15px;
     }
     
-    .company-logo, .fallback-icon {
+    .company-logo {
         margin-right: 0;
         margin-bottom: 15px;
     }
     
-    .job-details h3 {
-        font-size: 1.3rem;
+    .job-info h3 {
+        font-size: 1.2rem;
     }
     
-    .job-details h4 {
-        font-size: 1rem;
-    }
-    
-    .metrics {
-        justify-content: center;
+    .job-info h4 {
+        font-size: 0.95rem;
     }
     
     .timeline-section {
