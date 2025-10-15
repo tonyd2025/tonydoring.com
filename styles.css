@@ -412,6 +412,7 @@ body {
 
 .timeline-entry {
     position: relative;
+    display: block;
 }
 
 .timeline-entry:not(:last-child)::after {
@@ -655,8 +656,9 @@ body {
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
     margin: 0 auto;
     z-index: 5;
     transition: transform 0.3s ease;
@@ -666,12 +668,6 @@ body {
     transform: translateY(-5px);
 }
 
-.timeline-card.active {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateX(-50%) translateY(0) scale(1) !important;
-    pointer-events: auto;
-}
 
 /* Card Header */
 .card-header {
