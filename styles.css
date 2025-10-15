@@ -394,7 +394,7 @@ body {
 
 /* Interactive Timeline Section */
 .timeline-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background: rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
@@ -404,9 +404,10 @@ body {
 .simple-timeline {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 60px;
     max-width: 900px;
     margin: 0 auto;
+    padding: 40px 20px;
 }
 
 .timeline-entry {
@@ -417,10 +418,10 @@ body {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -20px;
+    bottom: -30px;
     transform: translateX(-50%);
     width: 2px;
-    height: 40px;
+    height: 60px;
     background: linear-gradient(to bottom, #00d4ff, transparent);
 }
 
@@ -1862,15 +1863,20 @@ body {
     
     /* Simple Timeline Mobile Styles */
     .simple-timeline {
-        padding: 0 10px;
+        padding: 20px 15px;
+        gap: 40px;
     }
     
     .timeline-entry {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
     
     .timeline-entry:not(:last-child)::after {
         display: none; /* Hide connecting lines on mobile */
+    }
+    
+    .timeline-section {
+        padding: 60px 0;
     }
     
     .card-header {
