@@ -748,9 +748,66 @@ function generateLogoPath(companyName) {
     return `logos/${cleanName}-logo.png`;
 }
 
-// Simple Timeline - No interaction needed
+// Interactive Timeline: hover/click to reveal corresponding card (desktop),
+// keyboard accessible via arrow keys and Enter/Space
 function setupInteractiveTimeline() {
-    console.log('Simple timeline setup - no interaction required');
+    const timeline = document.querySelector('.interactive-timeline');
+    if (!timeline) return;
+
+    const nodes = Array.from(timeline.querySelectorAll('.timeline-node'));
+    const cards = Array.from(timeline.querySelectorAll('.timeline-card'));
+
+    const activateCardById = (cardId) => {
+        cards.forEach(card => card.classList.toggle('active', card.id === cardId));
+        nodes.forEach(node => node.setAttribute('aria-selected', node.dataset.target === cardId ? 'true' : 'false'));
+    };
+
+    const focusNodeAt = (index) => {
+        if (index < 0 || index >= nodes.length) return;
+        nodes[index].focus();
+    };
+
+    nodes.forEach((node, index) => {
+        // Ensure buttons are focusable
+        node.setAttribute('tabindex', '0');
+
+        const targetId = node.dataset.target;
+
+        // Click/Touch
+        node.addEventListener('click', () => activateCardById(targetId));
+        node.addEventListener('touchend', () => activateCardById(targetId));
+
+        // Hover (desktop only behavior; harmless on touch)
+        node.addEventListener('mouseenter', () => activateCardById(targetId));
+
+        // Keyboard support
+        node.addEventListener('keydown', (e) => {
+            switch (e.key) {
+                case 'Enter':
+                case ' ': // Space
+                    e.preventDefault();
+                    activateCardById(targetId);
+                    break;
+                case 'ArrowRight':
+                case 'ArrowDown':
+                    e.preventDefault();
+                    focusNodeAt(index + 1);
+                    break;
+                case 'ArrowLeft':
+                case 'ArrowUp':
+                    e.preventDefault();
+                    focusNodeAt(index - 1);
+                    break;
+            }
+        });
+    });
+
+    // Activate first card by default if none active
+    const anyActive = cards.some(card => card.classList.contains('active'));
+    if (!anyActive && cards[0]) {
+        cards[0].classList.add('active');
+        if (nodes[0]) nodes[0].setAttribute('aria-selected', 'true');
+    }
 }
 
 // Initialize everything when DOM is loaded

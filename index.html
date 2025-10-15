@@ -131,6 +131,205 @@
                 <p class="section-subtitle">Scroll over each company to explore my professional experience.</p>
             </div>
             
+            <!-- Interactive Horizontal Timeline (Desktop) -->
+            <div class="interactive-timeline" aria-label="Career timeline">
+                <div class="timeline-track" aria-hidden="true">
+                    <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-nodes" role="tablist" aria-label="Companies">
+                    <button id="node-espn" class="timeline-node" data-target="card-espn" role="tab" aria-controls="card-espn" aria-selected="true">
+                        <div class="node-logo">
+                            <img src="logos/espn-logo.png" alt="ESPN" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fallback-icon"><i class="fas fa-graduation-cap"></i></div>
+                        </div>
+                        <div class="node-year">2016–2021</div>
+                    </button>
+                    <button id="node-nyt" class="timeline-node" data-target="card-nyt" role="tab" aria-controls="card-nyt" aria-selected="false">
+                        <div class="node-logo">
+                            <img src="logos/the-new-york-times-logo.png" alt="The New York Times" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fallback-icon"><i class="fas fa-newspaper"></i></div>
+                        </div>
+                        <div class="node-year">2021–2022</div>
+                    </button>
+                    <button id="node-spotify" class="timeline-node" data-target="card-spotify" role="tab" aria-controls="card-spotify" aria-selected="false">
+                        <div class="node-logo">
+                            <img src="logos/spotify-logo.png" alt="Spotify" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fallback-icon"><i class="fas fa-code"></i></div>
+                        </div>
+                        <div class="node-year">2022–2023</div>
+                    </button>
+                    <button id="node-aka" class="timeline-node" data-target="card-aka" role="tab" aria-controls="card-aka" aria-selected="false">
+                        <div class="node-logo">
+                            <img src="logos/aka-nyc-logo.png" alt="AKA NYC" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fallback-icon"><i class="fas fa-chart-line"></i></div>
+                        </div>
+                        <div class="node-year">2023</div>
+                    </button>
+                    <button id="node-arm" class="timeline-node" data-target="card-arm" role="tab" aria-controls="card-arm" aria-selected="false">
+                        <div class="node-logo">
+                            <img src="logos/ad-results-media-logo.png" alt="Ad Results Media" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fallback-icon"><i class="fas fa-chart-line"></i></div>
+                        </div>
+                        <div class="node-year">2024–2025</div>
+                    </button>
+                </div>
+                <div class="cards-container">
+                    <!-- ESPN Card -->
+                    <article id="card-espn" class="timeline-card espn-card active" role="tabpanel" aria-labelledby="node-espn">
+                        <div class="card-header">
+                            <div class="company-badge espn-badge">
+                                <img src="logos/espn-logo.png" alt="ESPN" class="badge-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="badge-fallback"><i class="fas fa-graduation-cap"></i></div>
+                            </div>
+                            <div class="header-info">
+                                <h3>ESPN</h3>
+                                <div class="job-title">Associate Manager, Audio Marketing</div>
+                                <div class="job-duration">Oct 2016 - March 2021 • New York, NY</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="skills-grid">
+                                <span class="skill-chip">Sales Collateral</span>
+                                <span class="skill-chip">Marketing Materials</span>
+                                <span class="skill-chip">Sales Training</span>
+                            </div>
+                            <div class="achievements">
+                                <p>Created and managed entire pipeline of RFP pitch decks for 15+ account executives and $100M+ in yearly ad sales across ESPN Podcasts and Radio.</p>
+                                <p>Created thought leadership and industry presentations for ESPN Audio in the podcast industry.</p>
+                                <p>Developed sales narratives utilizing data and custom research that launched multiple podcasts (30 For 30 Podcasts, ESPN Daily, etc.) with multimillion dollar Presenting Sponsorships pre-launch.</p>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric"><span class="metric-value">$100M+</span><span class="metric-label">Yearly Ad Sales</span></div>
+                                <div class="metric"><span class="metric-value">Industry Presence+</span><span class="metric-label">Through Thought Leadership</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- NYT Card -->
+                    <article id="card-nyt" class="timeline-card nyt-card" role="tabpanel" aria-labelledby="node-nyt">
+                        <div class="card-header">
+                            <div class="company-badge nyt-badge">
+                                <img src="logos/the-new-york-times-logo.png" alt="The New York Times" class="badge-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="badge-fallback"><i class="fas fa-newspaper"></i></div>
+                            </div>
+                            <div class="header-info">
+                                <h3>The New York Times</h3>
+                                <div class="job-title">Manager, Measurement Solutions</div>
+                                <div class="job-duration">March 2021 - April 2022 • New York, NY</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="skills-grid">
+                                <span class="skill-chip">Survey Design</span>
+                                <span class="skill-chip">Sales Training</span>
+                                <span class="skill-chip">Thought Leadership</span>
+                            </div>
+                            <div class="achievements">
+                                <p>Drove over $2.5M in new business revenue through proactive and custom quantitative and qualitative market research surveys (custom research, NPS) through Qualtrics via the NYT Sources audience panel, generating strategic B2B insights and communication, presentations and narratives for 360 engagement with NYT advertising teams and clients.</p>
+                                <p>Transitioned the Measurement Solutions team's survey workflow from Alida to Qualtrics which doubled the output of team surveys due to more efficient survey writing and data analysis.</p>
+                                <p>Designed and created B2B value story sales trainings and learnings of first party data product analysis tool that helped double output of tool adoption to 80+ clients, leading to multiple multi-million dollar client renewals.</p>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric"><span class="metric-value">$2.5M+</span><span class="metric-label">New Business Revenue</span></div>
+                                <div class="metric"><span class="metric-value">80+</span><span class="metric-label">Clients Adopted</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Spotify Card -->
+                    <article id="card-spotify" class="timeline-card spotify-card" role="tabpanel" aria-labelledby="node-spotify">
+                        <div class="card-header">
+                            <div class="company-badge spotify-badge">
+                                <img src="logos/spotify-logo.png" alt="Spotify" class="badge-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="badge-fallback"><i class="fas fa-code"></i></div>
+                            </div>
+                            <div class="header-info">
+                                <h3>Spotify</h3>
+                                <div class="job-title">Program Manager, Advertising Sciences</div>
+                                <div class="job-duration">April 2022 - Jan 2023 • New York, NY</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="skills-grid">
+                                <span class="skill-chip">Program Management</span>
+                                <span class="skill-chip">Marketing Research</span>
+                                <span class="skill-chip">Cross-Functional</span>
+                            </div>
+                            <div class="achievements">
+                                <p>Launched pilot advertiser program for ad creative measurement with 10 premier clients.</p>
+                                <p>Boosted team efficiency through enhanced goal tracking and cross-functional collaboration.</p>
+                                <p>Spearheaded multiple cross-functional research programs, designed methodologies, analyzed data, and delivered actionable insights (though B2B articles and client presentations) to inform decision-making and industry thought leadership.</p>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric"><span class="metric-value">+51%</span><span class="metric-label">YoY Revenue Increase</span></div>
+                                <div class="metric"><span class="metric-value">Pilot Product</span><span class="metric-label">For 10 Top Clients</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- AKA NYC Card -->
+                    <article id="card-aka" class="timeline-card aka-card" role="tabpanel" aria-labelledby="node-aka">
+                        <div class="card-header">
+                            <div class="company-badge aka-badge">
+                                <img src="logos/aka-nyc-logo.png" alt="AKA NYC" class="badge-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="badge-fallback"><i class="fas fa-chart-line"></i></div>
+                            </div>
+                            <div class="header-info">
+                                <h3>AKA NYC</h3>
+                                <div class="job-title">Data Science & Marketing Research Consultant</div>
+                                <div class="job-duration">June 2023 - Dec 2023 • New York, NY</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="skills-grid">
+                                <span class="skill-chip">Marketing Research</span>
+                                <span class="skill-chip">Survey Design</span>
+                                <span class="skill-chip">Project Management</span>
+                            </div>
+                            <div class="achievements">
+                                <p>Conducted proprietary quantitative and qualitative marketing research using survey design, interviews, and data analysis tools, shaping the agency's positioning.</p>
+                                <p>Generated $50K+ in new marketing research revenue through streamlining and creating new marketing research offerings (marketing research audits, creative testing) for nonprofit clients (inclusive of The Met Museum, Bloomberg Culture and New York Botanical Gardens).</p>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric"><span class="metric-value">$50K+</span><span class="metric-label">New Research Revenue</span></div>
+                                <div class="metric"><span class="metric-value">100%</span><span class="metric-label">Client Satisfaction</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Ad Results Media Card -->
+                    <article id="card-arm" class="timeline-card ad-results-card" role="tabpanel" aria-labelledby="node-arm">
+                        <div class="card-header">
+                            <div class="company-badge ad-results-badge">
+                                <img src="logos/ad-results-media-logo.png" alt="Ad Results Media" class="badge-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="badge-fallback"><i class="fas fa-chart-line"></i></div>
+                            </div>
+                            <div class="header-info">
+                                <h3>Ad Results Media</h3>
+                                <div class="job-title">Media Operations Director</div>
+                                <div class="job-duration">Jan 2024 - July 2025 • Remote</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="skills-grid">
+                                <span class="skill-chip">Project Management</span>
+                                <span class="skill-chip">AI Ad Creation</span>
+                                <span class="skill-chip">Team Leadership</span>
+                            </div>
+                            <div class="achievements">
+                                <p>Led the integration of the Audio Insights and Creative teams into a unified media operations group of 14 team members which improved cross-functional efficiency and fostered closer collaboration that sparked creative innovation across podcast campaigns for 50+ clients.</p>
+                                <p>Implemented an agency wide project management system (Monday.com) and ran a project steering committee that streamlined operations from 30+ Google spreadsheets and multiple ticketing systems (e.g., Jira and Basecamp) into a single organizational hub.</p>
+                                <p>Successfully piloted and launched an Al and synthetic voice ad creation production offering for multiple clients enabling rapid campaign launches (within two days vs several weeks) that directly led to incremental production revenue and $100K+ in media spend in 2024-25.</p>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric"><span class="metric-value">30+ → 1</span><span class="metric-label">Spreadsheets Unified</span></div>
+                                <div class="metric"><span class="metric-value">2 weeks → 2 days</span><span class="metric-label">Ad Production Time</span></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
             <!-- Simple Vertical Timeline -->
             <div class="simple-timeline">
                 <!-- ESPN -->
