@@ -402,7 +402,7 @@ body {
 
 /* Simple Timeline Styles */
 .simple-timeline {
-    display: flex;
+    display: none; /* hidden on desktop; enabled on mobile */
     flex-direction: column;
     gap: 40px;
     max-width: 900px;
@@ -429,6 +429,29 @@ body {
     margin: 0 auto;
     padding: 0 40px;
     position: relative;
+}
+
+/* Interactive cards default hidden except active */
+.interactive-timeline .cards-container {
+    position: relative;
+    min-height: 420px;
+}
+
+.interactive-timeline .timeline-card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.interactive-timeline .timeline-card.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(-50%) translateY(0) scale(1) !important;
+    pointer-events: auto;
 }
 
 /* Timeline Track */
@@ -473,6 +496,10 @@ body {
     position: relative;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Remove default button styles when rendered as a <button> */
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .timeline-node:hover {
@@ -1680,6 +1707,15 @@ body {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
+    /* Use vertical simple timeline on mobile; hide interactive timeline */
+    .interactive-timeline {
+        display: none;
+    }
+
+    .simple-timeline {
+        display: flex;
+    }
     
     .experience-header {
         flex-direction: column;
@@ -1851,7 +1887,8 @@ body {
         min-height: 300px;
     }
     
-    .timeline-card {
+    /* Only hide interactive cards by default on small mobile; simple timeline cards remain visible */
+    .interactive-timeline .timeline-card {
         position: static;
         transform: none;
         opacity: 0;
@@ -1860,7 +1897,7 @@ body {
         max-width: 100%;
     }
     
-    .timeline-card.active {
+    .interactive-timeline .timeline-card.active {
         opacity: 1;
         visibility: visible;
         transform: none;
