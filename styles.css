@@ -400,30 +400,97 @@ body {
     overflow: hidden;
 }
 
-/* Simple Timeline Styles */
-.simple-timeline {
+/* Clean Experience Timeline */
+.experience-timeline {
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    max-width: 900px;
+    gap: 40px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-.timeline-entry {
-    position: relative;
-    display: block;
+.experience-card {
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    transition: transform 0.3s ease;
 }
 
-.timeline-entry:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -30px;
-    transform: translateX(-50%);
-    width: 2px;
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    width: 60px;
     height: 60px;
-    background: linear-gradient(to bottom, #00d4ff, transparent);
+    object-fit: contain;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.fallback-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #00d4ff, #0099ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.job-details h3 {
+    font-size: 1.5rem;
+    color: #00d4ff;
+    margin-bottom: 5px;
+}
+
+.job-details h4 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.job-period {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.achievements {
+    margin-bottom: 20px;
+}
+
+.achievements p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.metrics .metric {
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .interactive-timeline {
@@ -1857,18 +1924,37 @@ body {
         max-width: 100%;
     }
     
-    /* Simple Timeline Mobile Styles */
-    .simple-timeline {
+    /* Experience Timeline Mobile Styles */
+    .experience-timeline {
         padding: 20px 15px;
-        gap: 40px;
+        gap: 30px;
     }
     
-    .timeline-entry {
-        margin-bottom: 40px;
+    .experience-card {
+        padding: 20px;
     }
     
-    .timeline-entry:not(:last-child)::after {
-        display: none; /* Hide connecting lines on mobile */
+    .company-info {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .company-logo, .fallback-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .job-details h3 {
+        font-size: 1.3rem;
+    }
+    
+    .job-details h4 {
+        font-size: 1rem;
+    }
+    
+    .metrics {
+        justify-content: center;
     }
     
     .timeline-section {
