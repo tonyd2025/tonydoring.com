@@ -2037,6 +2037,10 @@ body {
         display: none;
     }
     
+    .hero {
+        padding-top: 90px;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -2199,6 +2203,10 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
+    }
+    
+    .hero {
+        padding-top: 100px;
     }
     
     .hero-title {
