@@ -2037,6 +2037,10 @@ body {
         display: none;
     }
     
+    .hero {
+        padding-top: 120px;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
