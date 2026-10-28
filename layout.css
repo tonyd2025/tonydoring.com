@@ -57,3 +57,28 @@
   .layout-refresh .offer-section .offer-grid>.offer-card{flex:0 0 90%;width:90%;max-width:90%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always}
   .offer-grid>.offer-card:hover{transform:none}
 }
+
+/* Equal emphasis and a shared problem / result / details structure. */
+.layout-refresh .offer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.offer-grid>.offer-card{transform:none}
+.offer-card h3{min-height:60px}
+.offer-desc strong{color:#e8f3fb}
+.offer-card .offer-finish{margin-top:18px;padding-top:18px;min-height:108px}
+.offer-details{margin:18px 0 24px;border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}
+.offer-details summary{display:flex;justify-content:space-between;gap:12px;padding:16px 0;cursor:pointer;list-style:none;color:#e8f3fb;font-size:14px}
+.offer-details summary::-webkit-details-marker{display:none}
+.offer-details summary::after{content:'+';color:#00d4ff}
+.offer-details[open] summary::after{content:'−'}
+.offer-details .offer-list{margin:0 0 18px}
+.offer-card .offer-btn{margin-top:auto}
+.offer-details summary:focus-visible,.offer-service-nav a:focus-visible{outline:2px solid #00d4ff;outline-offset:4px}
+.offer-service-nav{display:none}
+@media(min-width:769px) and (max-width:900px){.layout-refresh .offer-grid{grid-template-columns:1fr}.offer-card h3,.offer-card .offer-finish{min-height:0}}
+@media(max-width:768px){
+ .offer-service-nav{display:flex;gap:8px;margin-bottom:14px}
+ .offer-service-nav a{flex:1;text-align:center;padding:11px 6px;border:1px solid rgba(153,211,255,.3);border-radius:999px;color:#e8f3fb;font-size:13px;text-decoration:none;background:#17202a}
+ .offer-service-nav a:hover{border-color:#00d4ff;color:#00d4ff}
+ .offer-card h3{min-height:60px}
+ .offer-card .offer-finish{min-height:0}
+ .offer-grid>.offer-card{scroll-margin-top:100px}
+}
