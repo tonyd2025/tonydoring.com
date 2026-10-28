@@ -52,8 +52,8 @@
 .offer-swipe-hint{display:none}
 @media(max-width:768px){
   .offer-swipe-hint{display:block;margin:0 0 14px;color:#b9c5cf;font-size:13px}
-  .offer-grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:0;padding:8px 12px 20px 0;align-items:stretch;scrollbar-width:thin;scrollbar-color:#56b8ff #17202a}
+  .layout-refresh .offer-section .offer-grid{display:flex;flex-direction:row;flex-wrap:nowrap;width:100%;max-width:100%;min-width:0;gap:16px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scroll-padding-inline:0;padding:8px 12px 20px 0;align-items:stretch;scrollbar-width:thin;scrollbar-color:#56b8ff #17202a}
   .offer-grid:focus-visible{outline:2px solid #00d4ff;outline-offset:5px}
-  .offer-grid>.offer-card{flex:0 0 90%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always}
+  .layout-refresh .offer-section .offer-grid>.offer-card{flex:0 0 90%;width:90%;max-width:90%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always}
   .offer-grid>.offer-card:hover{transform:none}
 }
