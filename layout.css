@@ -146,3 +146,22 @@
  .about-copy .statement-description{font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){.offer-grid{scroll-behavior:auto}}
+
+/* Compact, equally weighted service cards and a clear primary hero action. */
+.layout-refresh .offer-card h3{min-height:0;margin-bottom:16px}
+.layout-refresh .offer-card .offer-number{margin-bottom:24px}
+.layout-refresh .offer-card .offer-desc{min-height:0;margin-bottom:0}
+.layout-refresh .offer-card .offer-finish{min-height:0;margin-top:20px;padding-top:18px}
+.layout-refresh .offer-card .offer-details{margin:20px 0}
+.layout-refresh .offer-card .offer-btn{margin-top:auto}
+.layout-refresh .hero-buttons{align-items:center}
+.hero-linkedin{display:inline-flex;align-items:center;min-height:44px;padding:8px 4px;font-size:14px;color:#bfc9d1;text-decoration:none}
+.hero-linkedin:hover{color:#00d4ff;text-decoration:underline}
+@media(min-width:901px){
+ .layout-refresh .offer-grid>.offer-card{display:grid;grid-template-rows:auto 72px auto 1fr auto auto;align-content:start}
+ .layout-refresh .offer-card .offer-finish{align-self:start}
+ .layout-refresh .offer-card .offer-btn{align-self:end;justify-self:start}
+}
+@media(max-width:620px){
+ .layout-refresh .hero-buttons .hero-linkedin{justify-self:start;width:auto}
+}
