@@ -165,3 +165,16 @@
 @media(max-width:620px){
  .layout-refresh .hero-buttons .hero-linkedin{justify-self:start;width:auto}
 }
+
+/* One compact section for background and project approach. */
+.about-process .about-layout{align-items:start}
+.about-process .statement-title{font-size:clamp(30px,3vw,40px)}
+.about-process .statement-description{margin-bottom:24px}
+.about-project-steps{list-style:none;counter-reset:project-step;margin:0 0 24px;padding:0;scroll-margin-top:100px}
+.about-project-steps li{counter-increment:project-step;position:relative;display:grid;gap:4px;padding:17px 0 17px 46px;border-top:1px solid rgba(153,211,255,.18)}
+.about-project-steps li:last-child{border-bottom:1px solid rgba(153,211,255,.18)}
+.about-project-steps li::before{content:counter(project-step,decimal-leading-zero);position:absolute;left:0;top:18px;font-size:13px;font-weight:600;color:#56c7ff}
+.about-project-steps strong{font-size:17px;color:#e8f3fb}
+.about-project-steps span{font-size:15px;line-height:1.65;color:#b9c5cf}
+.about-process .service-contact{display:inline-block;padding-top:0}
+@media(max-width:768px){.about-process .portrait-card{max-width:240px}.about-process .portrait-card img{height:260px}.about-process .about-layout{gap:28px}}
