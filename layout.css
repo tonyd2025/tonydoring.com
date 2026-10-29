@@ -193,3 +193,5 @@
  .about-process .statement-description,.about-process .about-project-steps,.about-process .about-copy>.service-contact{grid-column:1/-1;margin:0}
  .about-process .about-copy>.service-contact{justify-self:start}
 }
+
+@media(max-width:768px){.about-process .about-heading .statement-title .gradient-text{display:block}}
