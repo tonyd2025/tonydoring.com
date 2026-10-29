@@ -178,3 +178,18 @@
 .about-project-steps span{font-size:15px;line-height:1.65;color:#b9c5cf}
 .about-process .service-contact{display:inline-block;padding-top:0}
 @media(max-width:768px){.about-process .portrait-card{max-width:240px}.about-process .portrait-card img{height:260px}.about-process .about-layout{gap:28px}}
+
+/* Attach the mobile portrait to the introduction rather than a separate row. */
+@media(max-width:768px){
+ .about-process .about-layout{display:grid;grid-template-columns:88px minmax(0,1fr);column-gap:18px;row-gap:24px;align-items:center}
+ .about-process .about-copy{display:contents}
+ .about-process .portrait-card{grid-column:1;grid-row:1;width:88px;max-width:88px;border-radius:50%;border:2px solid rgba(86,199,255,.4);box-shadow:none;background:transparent;margin:0;padding:0;overflow:hidden;transform:none}
+ .about-process .portrait-card img{width:84px;height:84px;object-fit:cover;object-position:center 25%}
+ .about-process .portrait-card>div{display:none}
+ .about-process .about-heading{grid-column:2;grid-row:1;min-width:0}
+ .about-process .about-heading .section-label{font-size:10px;letter-spacing:1px;margin-bottom:10px}
+ .about-process .about-heading .statement-title{font-size:clamp(23px,5.8vw,30px);line-height:1.2;margin:0;letter-spacing:-.5px}
+ .about-process .about-heading .statement-title br{display:none}
+ .about-process .statement-description,.about-process .about-project-steps,.about-process .about-copy>.service-contact{grid-column:1/-1;margin:0}
+ .about-process .about-copy>.service-contact{justify-self:start}
+}
